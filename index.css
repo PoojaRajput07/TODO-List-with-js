@@ -83,4 +83,34 @@ h1{
     outline: 2px solid yellow;
     box-shadow: 0 0 5px yellow;
 }
+/* ========== Responsive: Mobile Portrait ========== */
+@media (max-width: 600px) {
+  /* Make the main layout stack in one column */
+  .main-todo-div {
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+  }
+
+  /* Full‑width input box, with sensible max */
+  #inputbox {
+    width: 90vw;
+    max-width: 300px;
+  }
+
+  /* Shrink buttons a bit */
+  .btn,
+  .deletebtn {
+    width: 70px;
+    height: 28px;
+    font-size: 14px;
+  }
+
+  /* Make each todo item take full width */
+  .todo-list-elem {
+    width: 90vw;
+    max-width: 600px;
+    margin: 10px 0;
+  }
+}
+
 
