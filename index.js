@@ -54,9 +54,13 @@ const tododelete=(e)=>{
     let deleteitem=e.target.previousElementSibling.innerText;
     let parentElem=e.target.parentElement;
 
-    localtodolist=localtodolist.filter((curElem)=>{
-      return curElem!=deleteitem.toLowerCase();
-});
+    // localtodolist=localtodolist.filter((curElem)=>{
+    //   return curElem!=deleteitem.toLowerCase();
+
+      localtodolist = localtodolist.filter((curElem) => {
+        return curElem.toLowerCase() !== deleteitem.toLowerCase();
+      });
+
     console.log(localtodolist);
 
 addtolocalstorage(localtodolist);
